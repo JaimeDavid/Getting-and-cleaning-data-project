@@ -66,4 +66,4 @@ tidy_data <- dcast(shape1, Subject + descriptive_label ~ variable, mean)
 #set the working directory where we want the file.
 setwd("C:/Users/Gamers/Dropbox/R/Coursera R/Getting and cleaning data/Getting and cleaning data project")
 #writing the text file 
-write.table(tidy_data, "tidy_data.txt")
+write.table(tidy_data, "tidy_data.txt", row.names = FALSE)
