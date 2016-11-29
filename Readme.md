@@ -8,15 +8,15 @@ in order for us to create a tidy dataset with the information that was required,
 
 * I used the dplyr and reshape libraries and the base functions in R for the completion of this project.
 
-*The first thing I did was look at the structure of the data of each of the datasets to get a sense of what we are working with head function on each dataset
+* The first thing I did was look at the structure of the data of each of the datasets to get a sense of what we are working with head function on each dataset
 
-*I started with the train dataset and then moved on to the test dataset seeing that they had the same column length but diferent row length, so i decided that i needed to modify the dataset and then join them all together.
+* I started with the train dataset and then moved on to the test dataset seeing that they had the same column length but diferent row length, so i decided that i needed to modify the dataset and then join them all together.
 
 * First I gave names to each of the features and descriptive labels columns, then I loaded the x_train, subject_train and y_train into R.
 
-*Looking at the dimension of the x_train dataset and the features dataset plus the information in the readme file I concluded that the features dataset was the column names for the x_ train dataset, using the appropiate function colnames() I named each of the columns in the x_train dataset using the information on the features dataset, then I gave column names for the y_train ("Activity") and subject_train ("Subject") datasets
+* Looking at the dimension of the x_train dataset and the features dataset plus the information in the readme file I concluded that the features dataset was the column names for the x_ train dataset, using the appropiate function colnames() I named each of the columns in the x_train dataset using the information on the features dataset, then I gave column names for the y_train ("Activity") and subject_train ("Subject") datasets
 
-*I created the descriptive label column that was needed in the y_train dataset by using the mutate function and the information from the activity_labels dataset.
+* I created the descriptive label column that was needed in the y_train dataset by using the mutate function and the information from the activity_labels dataset.
 
 * I create the dataset train_data by binding the columns cbind(), using the subject_train, y_train and x_train datasets.
 
@@ -30,7 +30,7 @@ in order for us to create a tidy dataset with the information that was required,
 
 * Now we create the tidy_data dataset, first I start creating a dataset called shape_1 using the melt function from the reshape library, using the subset_data dataset and using id variables "Subject" and "Descriptive Label".
 
-*Now I use the dcast function on the shape1 dataset, using the appropiate syntax so the "Subject" and "descriptive_label"
+* Now I use the dcast function on the shape1 dataset, using the appropiate syntax so the "Subject" and "descriptive_label"
  as variables and the function mean whic was asked.
 
 * Now we change the working directory to the place location we want the file saved and use the write.table function to get the file.
